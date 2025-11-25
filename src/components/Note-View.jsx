@@ -5,14 +5,14 @@ import propTypes from "prop-types";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area"
 export default function NoteView({note,onEdit}){
-    return (<Card>
+    return (<Card >
         <CardHeader>
             <CardTitle>{note.title}</CardTitle>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-md text-muted-foreground">
                 {formatDate(note.createdAt)}
             </p>
         </CardHeader>
-        <CardContent>
+        <CardContent onClick={onEdit}>
             <ScrollArea className="h-[calc(100vh-350px)]">
                 <div>{note.content}</div>
             </ScrollArea>

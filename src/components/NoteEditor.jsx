@@ -18,7 +18,6 @@ export default function NoteEditor({note,onCancel,onSave}){
             title:title.trim() || "Untitled Note",
             content,
         })
-
     }
 
     return (
@@ -28,7 +27,7 @@ export default function NoteEditor({note,onCancel,onSave}){
                 value={title}
                 onChange={(e)=>setTitle(e.target.value)}
                 placeholder = "Note-title"
-                className="text-xl font-bold border-none px-0 focus-visible:ring-0">
+                className="font-semibold border-none px-0 text-2xl focus-visible:ring-0">
                 </Input>
             </CardHeader>
             <CardContent>
@@ -36,7 +35,7 @@ export default function NoteEditor({note,onCancel,onSave}){
                 value={content}
                 onChange={(e)=>setContent(e.target.value)}
                 placeholder = "write your note here..."
-                className="h-[calc(100vh-350px)] resize-none border-none focus-visible:ring-0 p-0"
+                className=" h-[calc(100vh-280px)] resize-none border-none focus-visible:ring-0 p-0"
                 ></Textarea>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2">
