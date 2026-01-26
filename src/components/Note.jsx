@@ -139,6 +139,11 @@ export default function Home() {
           <RenderNoteContent />
         </div>
       </main>
+      <footer>
+        <div className=" text-muted-foreground mb-3 flex flex-end items-center justify-center text-xs color-">
+          Developed with ❤️ by  Bharath
+        </div>
+      </footer>
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function NoteEditor({note,onCancel,onSave}){
                 value={content}
                 onChange={(e)=>setContent(e.target.value)}
                 placeholder = "write your note here..."
-                className=" h-[calc(100vh-280px)] resize-none border-none focus-visible:ring-0 p-0"
+                className=" h-[calc(100vh-290px)] resize-none border-none focus-visible:ring-0 p-0"
                 ></Textarea>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2">

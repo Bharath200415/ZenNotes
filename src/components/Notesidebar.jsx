@@ -22,7 +22,7 @@ const Notesidebar = ({notes, onSelectNote, onButtonClick,onDeleteNote,activeNote
         {notes.length===0?(
             <EmptyState message="no notes yet" buttonText="Create your first Note" onButtonClick={onButtonClick}/>
         ):(
-            <ScrollArea className="h-[calc(100vh-250px)]">
+            <ScrollArea className="h-[calc(100vh-250px)] mask-b-from-2% mask-b-to-98% ">
                 <div>
                     {notes.map(note=>{
                         return(

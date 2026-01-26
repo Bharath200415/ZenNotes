@@ -7,7 +7,7 @@ function Header({ onNewNote, isDark, onToggleTheme }) {
     <header className="border-b p-4 bg-card">
       <div className="container mx-auto flex justify-between items-center">
         
-        <h1 className="text-2xl font-bold">Zen Notes</h1>
+        <h1 className="text-2xl font-semibold">Zen Notes</h1>
 
         <div className="flex items-center gap-2">
           <Button onClick={onNewNote} size="sm">
