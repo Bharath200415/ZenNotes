@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       </main>
       <footer>
-        <div className=" text-muted-foreground mb-3 flex flex-end items-center justify-center text-xs color-">
+        <div className=" text-muted-foreground mb-2 mt-[-3px] flex flex-end items-center justify-center text-xs text-neutral-300">
           Developed with ❤️ by  Bharath
         </div>
       </footer>
