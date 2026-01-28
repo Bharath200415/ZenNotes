@@ -8,10 +8,12 @@ import { ScrollArea } from "./ui/scroll-area"
 export default function NoteView({note,onEdit}){
     return (<Card >
         <CardHeader onClick={onEdit}>
-            <CardTitle >{note.title}</CardTitle>
-            <p className="text-sm text-muted-foreground">
+            <CardTitle className="border-b [.border-b]:pb-1 dark:border-neutral-800 border-neutral-100">{note.title}</CardTitle>
+            
+            <p className="text-sm text-muted-foreground ">
                 {formatDate(note.createdAt)}
             </p>
+            
         </CardHeader>
         <CardContent onClick={onEdit}>
             <ScrollArea className="h-[calc(100vh-300px)]">

@@ -25,7 +25,7 @@ const Notesidebar = ({notes, onSelectNote, onButtonClick,onDeleteNote,activeNote
             <ScrollArea className="h-[calc(100vh-230px)] mask-b-from-85% mask-b-to-100%
 ">
                 <div>
-                    {notes.map(note=>{
+                    {notes.sort((a, b) => b.createdAt - a.createdAt).map(note=>{
                         return(
                         <div onClick={()=>{
                             onSelectNote(note)

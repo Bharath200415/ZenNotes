@@ -126,7 +126,7 @@ export default function Home() {
       />
 
       <main className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
-        <div className="md:col-span-1">
+        <div className="md:col-span-1]">
           <Notesidebar
             onButtonClick={createNewNote}
             notes={notes}
