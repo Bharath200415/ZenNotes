@@ -28,7 +28,7 @@ export default function NoteEditor({note,onCancel,onSave}){
                 title: title.trim() || "Untitled Note",
                 content,
             });
-        }, 500);
+        }, 1000);
 
         return () => clearTimeout(timeoutId);
     }, [title, content, note, onSave]);
