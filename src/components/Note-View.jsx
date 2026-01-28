@@ -3,6 +3,7 @@ import { NotePropType } from "../lib/type";
 import { formatDate } from "../lib/storage";
 import propTypes from "prop-types";
 import { Button } from "./ui/button";
+import { IconEdit } from "@tabler/icons-react";
 import { ScrollArea } from "./ui/scroll-area"
 export default function NoteView({note,onEdit}){
     return (<Card >
@@ -19,7 +20,7 @@ export default function NoteView({note,onEdit}){
             
         </CardContent>
         <CardFooter className="flex justify-end" >
-            <Button onClick={onEdit}>Edit Note</Button>
+            <Button onClick={onEdit}><IconEdit/> Edit Note</Button>
         </CardFooter>
         </Card>)
 }
