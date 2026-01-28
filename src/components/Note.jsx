@@ -76,7 +76,7 @@ export default function Home() {
       )
     );
     setActiveNote(updatedNote);
-    setIsEditing(false);
+    // Don't exit edit mode - stay in editor for auto-save
   };
 
   const RenderNoteContent = () => {

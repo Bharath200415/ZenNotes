@@ -6,14 +6,14 @@ import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area"
 export default function NoteView({note,onEdit}){
     return (<Card >
-        <CardHeader>
-            <CardTitle>{note.title}</CardTitle>
+        <CardHeader onClick={onEdit}>
+            <CardTitle >{note.title}</CardTitle>
             <p className="text-sm text-muted-foreground">
                 {formatDate(note.createdAt)}
             </p>
         </CardHeader>
         <CardContent onClick={onEdit}>
-            <ScrollArea className="h-[calc(100vh-350px)]">
+            <ScrollArea className="h-[calc(100vh-300px)]">
                 <div>{note.content}</div>
             </ScrollArea>
             
