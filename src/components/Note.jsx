@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Notesidebar from "./Notesidebar";
+import { Github } from "lucide-react";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import NoteView from "./Note-View";
@@ -140,8 +141,9 @@ export default function Home() {
         </div>
       </main>
       <footer>
-        <div className=" text-muted-foreground mb-2 mt-[-3px] flex flex-end items-center justify-center text-xs text-neutral-300">
-          Developed with ❤️ by  Bharath
+        <div className=" text-neutral-300 mb-1 mt-[-7px] flex flex-end items-center justify-center text-xs">
+          <Github size={15} className="mr-2"/> <a className="underline" href="https://github.com/bharath200415">Bharath200415</a>
+          
         </div>
       </footer>
     </div>

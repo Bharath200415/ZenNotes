@@ -14,7 +14,7 @@ export default function NoteView({note,onEdit}){
         </CardHeader>
         <CardContent onClick={onEdit}>
             <ScrollArea className="h-[calc(100vh-300px)]">
-                <div>{note.content}</div>
+                <div className="whitespace-pre-wrap">{note.content}</div>
             </ScrollArea>
             
         </CardContent>
