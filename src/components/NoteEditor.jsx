@@ -13,6 +13,14 @@ export default function NoteEditor({note,onCancel,onSave}){
     const [content,setContent] = useState(note.content);
     const isFirstRender = useRef(true);
     const editorRef = useRef(null);
+    const onSaveRef = useRef(onSave);
+    const noteRef = useRef(note);
+    
+    // Keep refs updated
+    useEffect(() => {
+        onSaveRef.current = onSave;
+        noteRef.current = note;
+    }, [onSave, note]);
 
     // Auto-save with debounce
     useEffect(() => {
@@ -23,15 +31,15 @@ export default function NoteEditor({note,onCancel,onSave}){
         }
 
         const timeoutId = setTimeout(() => {
-            onSave({
-                ...note,
+            onSaveRef.current({
+                ...noteRef.current,
                 title: title.trim() || "Untitled Note",
                 content,
             });
-        }, 1000);
+        }, 2000);
 
         return () => clearTimeout(timeoutId);
-    }, [title, content, note, onSave]);
+    }, [title, content]);
 
     // Handle click outside to exit edit mode
     useEffect(() => {
