@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </main>
       <footer>
-        <div className=" text-neutral-300 mb-1 mt-[-7px] flex flex-end items-center justify-center text-xs">
+        <div className=" dark:text-neutral-300 text-neutral-700 mb-1 mt-[-7px] flex flex-end items-center justify-center text-xs">
           <Github size={15} className="mr-2"/> <a className="underline" href="https://github.com/bharath200415">Bharath200415</a>
           
         </div>

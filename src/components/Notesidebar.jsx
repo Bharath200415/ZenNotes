@@ -14,7 +14,7 @@ import { ScrollArea } from "./ui/scroll-area";
 
 const Notesidebar = ({notes, onSelectNote, onButtonClick,onDeleteNote,activeNoteId}) => {
   return (
-    <Card className="h-full bg-gray">
+    <Card className="h-full bg-gray shadow-sm">
     <CardHeader>
         <CardTitle>My Notes</CardTitle>
     </CardHeader>
@@ -22,7 +22,8 @@ const Notesidebar = ({notes, onSelectNote, onButtonClick,onDeleteNote,activeNote
         {notes.length===0?(
             <EmptyState message="no notes yet" buttonText="Create your first Note" onButtonClick={onButtonClick}/>
         ):(
-            <ScrollArea className="h-[calc(100vh-230px)] mask-b-to-% ">
+            <ScrollArea className="h-[calc(100vh-230px)] mask-b-from-85% mask-b-to-100%
+">
                 <div>
                     {notes.map(note=>{
                         return(

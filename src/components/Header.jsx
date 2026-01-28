@@ -1,13 +1,17 @@
 import { Plus, Sun, Moon } from "lucide-react";
 import { Button } from "./ui/button";
 import PropTypes from "prop-types";
+import logo from "../../favicon.svg";
 
 function Header({ onNewNote, isDark, onToggleTheme }) {
   return (
     <header className="border-b p-4 bg-card">
       <div className="container mx-auto flex justify-between items-center">
         
-        <h1 className="text-2xl font-semibold">Zen Notes</h1>
+        <h1 className="text-2xl font-semibold flex items-center gap-2">
+          <img src={logo} alt="Zen Notes Logo" className="h-[30px] w-[30px]" />
+          Zen Notes
+        </h1>
 
         <div className="flex items-center gap-2">
           <Button onClick={onNewNote} size="sm">
